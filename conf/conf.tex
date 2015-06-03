@@ -1,0 +1,181 @@
+
+% This file is need to encoded in utf-8
+%
+% Choose or fill in some needed information for this thesis or dissertation
+% 選擇或填入你的論文一些需要使用的資料
+
+% ----------------------------------------------------------------------------
+
+% --- 論文的編寫語言 / 用途 ---
+% 只能選擇其中一個
+
+  \ChiMode %:   編寫的為中英混合版, 有提供基本的所需的檔案
+% \EngMode:  編寫的為全英文版, 有提供基本的所需的檔案
+% \DemoMode: 完整教學 或 樣板測試用
+
+% \DemoMode
+
+%--------------------------------------------------
+
+% --- 封面名字顯示方式 ---
+% (如果你是使用\ChiMode, 則可無視這個設定)
+
+% 如果你選擇是\EngMode,
+% 預設在封面上只會顯示英文名字而已
+% 把'%'拿掉以設定同時顯示中英文名字
+
+%\CDBothName
+
+% ----------------------------------------------------------------------------
+
+% --- Title 論文題目 ---
+% 填寫中文和(或)英文
+% 如果題目內有必須以數學模式表示的符號，請用 \mbox{} 包住數學模式
+% 如果覺得自動產生出來的題目斷行位置不適合, 可以手動加'\\'來強制斷行
+% (圖書館說不管你是編寫中英混合或全英文版, 都必須同時存在中英題目)
+%
+% 有3種可使用, 可獨立使用, 但只有最後設定的一方有效
+% \SetTitle{你的題目}{Your Title}   % 同時設定中英文題目
+% \SetChiTitle{你的題目}            % 只設定中文題目
+% \SetEngTitle{Your Title}         % 只設定英文題目
+%
+% e.g:
+%
+% \SetTitle %
+% {國立成功大學碩博士用畢業論文XeLaTex模板} %
+% {National Cheng Kung University (NCKU) Thesis/Dissertation Template in XeLaTex}
+%
+% or
+%
+% \SetChiTitle{國立成功大學碩博士用畢業論文XeLaTex模板}
+% \SetEngTitle{National Cheng Kung University (NCKU)\\ Thesis/Dissertation Template in XeLaTex}
+
+\SetTitle %
+{私立東海大學碩士用畢業論文} %
+{Tong Hai University (PTHU) \\ Thesis }
+
+
+% ----------------------------------------------------------------------------
+
+% --- Degree name 學位 ---
+%
+% 有2種可選擇, 但只有最後設定的一方有效
+% \PhdDegree    % 博士學位
+ \MasterDegree % 碩士學位
+
+%\PhdDegree
+
+% ----------------------------------------------------------------------------
+
+% --- Your name 你的名字 ---
+% 填寫你的中文和(或)英文
+
+% 有3種可使用, 可獨立使用, 但只有最後設定的一方有效
+% \SetMyName{你的名字}{Your name}   % 同時設定你的中英文名字
+% \SetMyChiName{你的名字}           % 只設定你的中文名字
+% \SetMyEngName{Your name}         % 只設定你的英文名字
+
+\SetMyName{郭依如}{Lilian Kuo}
+
+% ----------------------------------------------------------------------------
+
+% --- Date 日期 ---
+
+% 論文封面年月日因教務處仍無最後之確定版本, 所以目前仍以口試合格日為基準點.
+% (若口試日期為 2014/10/01, 則封面日期需為2014/10, 2014/10/01或之後日期)
+
+% --- 論文封面上的日期 ---
+% 設定西元的年月, 會自動計算出民國的年份, 和英文的月份轉換
+% 次序: {年份}{月份}
+% \SetThesisDate{2014}{12}
+
+\SetThesisDate{2015}{6}
+
+%--------------------------------------------------
+
+% --- 口試的日期 ---
+% 設定西元的年月日, 會自動計算出民國的年份, 和英文的月份轉換
+% 次序: {年份}{月份}{日}
+% \SetOralDate{2014}{12}{31}
+
+\SetOralDate{2015}{06}{20}
+
+% ----------------------------------------------------------------------------
+
+% --- 系所 Department or Institute ---
+%
+% 設定你的系所名字, e.g:
+% \SetDeptMath 數學系
+% \SetDeptCSIE 資訊工程學系
+
+\SetDeptEMBA %高階管理碩士在職專班
+
+% ----------------------------------------------------------------------------
+
+% --- 指導老師 Advisor(s) ---
+% 在封面上預算了最多3位的空間
+% 中文名字固定以 教授  為結尾
+% 英文名字固定以 Prof. 為開頭
+
+% 有3種可使用, 用來設定3位老師的名字
+% \SetAdvisorNameX{老師的名字}{Professor's name} % 同時設定中英文名字
+% \SetAdvisorChiNameX{老師的名字}                % 只設定中文名字
+%\SetAdvisorChiNameX{王本正}          % 只設定中文名字
+% \SetAdvisorEngNameX{Professor's name}         % 只設定英文名字
+% (NameX為NameA, NameB, NameC)
+
+% 使用\SetAdvisorNameA是必須的, 而如果你的指導教授有2或3位,
+% 那只要增加\SetAdvisorNameB和\SetAdvisorNameC則可
+
+\SetAdvisorNameA{王本正}{Kenny Wang}
+%\SetAdvisorNameB{B}{B}
+%\SetAdvisorNameC{C}{C}
+
+% ----------------------------------------------------------------------------
+
+% --- 口試証明文件 Oral presentation document ---
+% 範例版本 或 使用檔案 只能選擇其中一方
+
+% 顯示 / 使用 口試範例版本
+\DisplayOralTemplete
+% --- 口試委員 Committee member(s) ---
+% 口試委員數量 (至少2位, 最多8位, 預設為8位) 
+% (Only work with \DisplayOralTemplete)
+% 博士學位考試委員會置委員五人至九人
+% 碩士學位考試委員會置委員三人至五人
+% 口試委員人數含指導教授
+\SetCommitteeSize{5}
+
+%--------------------------------------------------
+
+% 使用口試圖片檔案
+% 把你的圖片放在'context/oral'下
+% 之後設定中英文版所對應是哪一個檔案
+% (例子用的'oral-chi.pdf'和'oral-eng.pdf'已放在'context/oral'中)
+%
+%\DisplayOralImage                % 顯示圖片
+%\SetOralImageChi{oral-chi.pdf}   % 中文口試檔案
+%\SetOralImageEng{oral-eng.pdf}   % 英文口試檔案
+
+% ----------------------------------------------------------------------------
+
+% 關鍵字 Keyword
+% 最多5個關鍵字
+
+%\SetKeywords{Keyword A}{Keyword B}{Keyword C}{Keyword D}{Keyword E}
+
+\SetKeywords{社群}{分享}{g0v}{非營利}{組織建構}
+
+% ----------------------------------------------------------------------------
+
+% 書脊 Spine
+
+% 預設書脊上會使用英文題目
+% 把'%'拿掉以設定改使用中文題目
+% Default using the english title in Spine
+% Remove '%' for change to use chinese title
+
+\SpineTitleChi
+
+% ----------------------------------------------------------------------------
+

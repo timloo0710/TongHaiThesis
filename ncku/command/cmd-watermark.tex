@@ -1,0 +1,50 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% Some helper function about watermark
+
+% ----------------------------------------------------------------------------
+
+% 學校Logo watermark
+\newcommand{\UseSchoolWatermark}[0]
+{
+  \AddToShipoutPicture{
+  \put(0,0){
+  \parbox[b][\paperheight]{\paperwidth}{
+  \vfill
+  \centering
+  \includegraphics[]{./ncku/watersymbol.jpg}
+  \vfill
+  }}}
+} % End of \newcommand{}
+
+% 學校文字的watermark
+\newcommand{\UseSchoolTextWatermark}[0]
+{
+  \AddToShipoutPicture*{
+  \put(0,0){
+  \parbox[b][\paperheight]{\paperwidth}{
+  \vfill
+  \centering
+   \makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.75}%
+          {\fontsize{2.0cm}{2.0cm}\selectfont{\GetSchoolChiName}}}}
+  \vfill
+  }}}
+} % End of \newcommand{}
+
+\newcommand{\ClearWatermark}[0]{\ClearShipoutPicture}
+
+% ----------------------------------------------------------------------------
+

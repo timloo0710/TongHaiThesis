@@ -1,0 +1,88 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% Some common helper function
+
+% ----------------------------------------------------------------------------
+
+% Some helper functions
+
+\newcommand{\GetMonthInEng}[1]
+{
+  \ifthenelse{\equal{#1}{1}}{January}{}
+  \ifthenelse{\equal{#1}{2}}{February}{}
+  \ifthenelse{\equal{#1}{3}}{March}{}
+  \ifthenelse{\equal{#1}{4}}{April}{}
+  \ifthenelse{\equal{#1}{5}}{May}{}
+  \ifthenelse{\equal{#1}{6}}{June}{}
+  \ifthenelse{\equal{#1}{7}}{July}{}
+  \ifthenelse{\equal{#1}{8}}{August}{}
+  \ifthenelse{\equal{#1}{9}}{September}{}
+  \ifthenelse{\equal{#1}{10}}{October}{}
+  \ifthenelse{\equal{#1}{11}}{November}{}
+  \ifthenelse{\equal{#1}{12}}{December}{}
+} % End of \newcommand{}
+
+% 計算出台灣民國幾年
+% Get the year using Taiwans' year
+\newcommand{\SetOralTaiwanYear}[1]
+{
+  \FPeval{\OralTaiwanYearResult}{clip(#1 - 1911)}
+} % End of \newcommand{}
+
+% 計算出台灣民國幾年
+% Get the year using Taiwans' year
+\newcommand{\SetThesisTaiwanYear}[1]
+{
+  \FPeval{\ThesisTaiwanYearResult}{clip(#1 - 1911)}
+} % End of \newcommand{}
+
+% ----------------------------------------------------------------------------
+
+% --- 關鍵字 Keyword ---
+\newcommand{\KeywordsA}{} % Default
+\newcommand{\KeywordsB}{} % Default
+\newcommand{\KeywordsC}{} % Default
+\newcommand{\KeywordsD}{} % Default
+\newcommand{\KeywordsE}{} % Default
+\newcommand{\SetKeywordsA}[1]{\renewcommand{\KeywordsA}{#1}}
+\newcommand{\SetKeywordsB}[1]{\renewcommand{\KeywordsB}{#1}}
+\newcommand{\SetKeywordsC}[1]{\renewcommand{\KeywordsC}{#1}}
+\newcommand{\SetKeywordsD}[1]{\renewcommand{\KeywordsD}{#1}}
+\newcommand{\SetKeywordsE}[1]{\renewcommand{\KeywordsE}{#1}}
+\newcommand{\GetKeywordsA}[0]{\KeywordsA}
+\newcommand{\GetKeywordsB}[0]{\KeywordsB}
+\newcommand{\GetKeywordsC}[0]{\KeywordsC}
+\newcommand{\GetKeywordsD}[0]{\KeywordsD}
+\newcommand{\GetKeywordsE}[0]{\KeywordsE}
+\DeclareDocumentCommand{\SetKeywords}{
+  m G{\empty} G{\empty} G{\empty} G{\empty}}
+{
+  \SetKeywordsA{#1}
+  \ifthenelse{\equal{#2}{\empty}}{}{\SetKeywordsB{#2}}
+  \ifthenelse{\equal{#3}{\empty}}{}{\SetKeywordsC{#3}}
+  \ifthenelse{\equal{#4}{\empty}}{}{\SetKeywordsD{#4}}
+  \ifthenelse{\equal{#5}{\empty}}{}{\SetKeywordsE{#5}}
+} % End of \newcommand{}
+
+% ----------------------------------------------------------------------------
+
+% In the minimal example below the macro \modulo{<a>}{<b>} stores the result of <a> mod <b> in the macro \result
+\newcommand{\modulo}[2]{%
+  \FPeval{\result}{trunc(#1-(#2*trunc(#1/#2,0)),0)}%
+}
+
+% ----------------------------------------------------------------------------
+

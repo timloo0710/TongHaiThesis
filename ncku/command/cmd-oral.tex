@@ -1,0 +1,208 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% Some helper function use for oral document
+
+% ----------------------------------------------------------------------------
+\def \OralIndexHeader {Oral presentation document}
+% ----------------------------------------------------------------------------
+
+% 口試委員 Committee member(s)
+\newcommand{\CommitteeSize}{8} % Default
+\newcommand{\GetCommitteeSize}[0]{\CommitteeSize}
+\newcommand{\SetCommitteeSize}[1]
+{
+  \ifthenelse{#1 < 2}
+  {
+    \renewcommand{\CommitteeSize}{2}
+  } % End of if{}
+  {
+    \ifthenelse{#1 > 8}
+    {\renewcommand{\CommitteeSize}{8}}
+    {\renewcommand{\CommitteeSize}{#1}}
+  } % End of else{}
+} % End of \newcommand{}
+
+% 口試委員簽名區
+\newcommand{\DisplayCommitteeSignatureArea}
+{
+  % 口試委員 至少2位
+  \ifthenelse{\CommitteeSize = 2}
+  {
+    \begin{minipage}[c][6.4cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 3}
+  {
+    \begin{minipage}[c][3.2cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][3.2cm][c]{\textwidth}
+      \makebox[\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 4}
+  {
+    \begin{minipage}[c][3.2cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][3.2cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 5}
+  {
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 6}
+  {
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][2.13cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 7}
+  {
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+
+  \ifthenelse{\CommitteeSize = 8}
+  {
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+
+    \begin{minipage}[c][1.6cm][c]{\textwidth}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+      \makebox[0.5\textwidth][c]{\namesigdate}
+    \end{minipage}
+  } % End of if{}
+  {} % End of else{}
+} % End of \newcommand{}
+
+
+% ----------------------------------------------------------------------------
+
+% Signature line
+\newcommand{\namesigdate}[0]{\rule{5.5cm}{1pt}}
+
+% ----------------------------------------------------------------------------
+
+% 口試証明文件 Document of oral presentation
+
+% 要顯示圖片還是範例
+\newcommand{\OralDocumentImage}{0}
+\newcommand{\OralDocumentTemplete}{1}
+\newcommand{\OralDocumentEngOnly}{0}
+\newcommand{\OralDocument}{\OralDocumentTemplete} % Default
+
+\newcommand{\DisplayOralTemplete}[0]
+  {\renewcommand{\OralDocument}{\OralDocumentTemplete}}
+\newcommand{\DisplayOralImage}[0]
+  {\renewcommand{\OralDocument}{\OralDocumentImage}}
+\newcommand{\DisplayOralEngOnly}[0]
+  {\renewcommand{\OralDocumentEngOnly}{1}}
+
+% The path of the image that the oral document
+\newcommand\OralDocumentImageChiPath{./example/oral/oral-chi.pdf} % Default
+\newcommand\OralDocumentImageEngPath{./example/oral/oral-eng.pdf} % Default
+\newcommand{\SetOralImageChi}[1]
+{\renewcommand{\OralDocumentImageChiPath}{./context/oral/#1}}
+\newcommand{\SetOralImageEng}[1]
+{\renewcommand{\OralDocumentImageEngPath}{./context/oral/#1}}
+
+\newcommand{\SetOralImage}[2]
+{
+  \SetOralImageChi{#1}
+  \SetOralImageEng{#2}
+} % End of \newcommand{}
+
+\newcommand{\GetOralImageChiPath}[0]{\OralDocumentImageChiPath}
+\newcommand{\GetOralImageEngPath}[0]{\OralDocumentImageEngPath}
+
+% ----------------------------------------------------------------------------
+
+% Use to include the oral files
+\newcommand{\DisplayOral}{\input{./ncku/oral/oral}}
+
+% ----------------------------------------------------------------------------

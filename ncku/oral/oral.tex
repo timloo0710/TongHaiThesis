@@ -1,0 +1,145 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% ----------------------------------------------------------------------------
+%                           Document of oral presentation
+%                                   口試証明文件
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+
+\begin{comment}
+\ifthenelse{\OralDocument = \OralDocumentTemplete}
+{
+  % -------------------------- 顯示範本 --------------------------
+  \ifthenelse{\LangEnableChi = 1}
+  {
+    \StartNewPage
+
+    % 設定顯示在目錄
+    % If combine with english version
+    \ifthenelse{\GetLangEnableEng = 1}
+    {
+      \addcontentsline{toc}{chapter}{Document of oral presentation}
+    }{}
+
+    % Chinese version
+    \input{./ncku/oral/templete/templete-chi}
+
+    % ------------------------------------------------
+    \ifthenelse{\GetLangEnableDemo = 1}
+    {
+      \input{./ncku/oral/templete/templete-chi-2}
+      \input{./ncku/oral/templete/templete-chi-3}
+      \input{./ncku/oral/templete/templete-chi-4}
+    }{}
+    % ------------------------------------------------
+  }{}
+
+  % English page start
+  \ifthenelse{\GetLangEnableEng = 1}
+  {
+    \StartNewPage
+
+    % 設定顯示在目錄
+    % If combine with chinese version
+    \ifthenelse{\LangEnableChi = 1}
+    {
+      \addcontentsline{toc}{section}{English version}
+    } % End of if{}
+    {
+      \addcontentsline{toc}{chapter}{Document of oral presentation}
+    } % End of else{}
+
+    \thispagestyle{empty}
+    \input{./ncku/oral/templete/templete-eng}
+  }{}
+} % End of if{}
+{
+  % ---------------------- 顯示圖片, Image in PDF format ----------------------
+
+  % Page start
+  \StartNewPage
+  \thispagestyle{empty}
+
+  % 設定顯示在目錄
+  \addcontentsline{toc}{chapter}{Document of oral presentation}
+
+  % Chinese page start
+  \ifthenelse{\LangEnableChi = 1}
+  {
+    \addcontentsline{toc}{section}{Chinese version}
+    \includepdf{\GetOralImageChiPath}
+  }{}
+
+  % English page start
+
+  % If combine with chinese version
+  \ifthenelse{\LangEnableChi = 1}
+  {
+    \StartNewPage
+    \thispagestyle{empty}
+    \addcontentsline{toc}{section}{English version}
+  }{}
+
+  \includepdf{\GetOralImageEngPath}
+} % End of else{}
+\end{comment}
+
+% ----------------------------------------------------------------------------
+
+\ifthenelse{\OralDocument = \OralDocumentTemplete}
+{
+  % -------------------------- 顯示範本 --------------------------
+
+  % 設定顯示在目錄
+  \StartNewPage
+  %\thispagestyle{empty}
+  \addcontentsline{toc}{chapter}{\OralIndexHeader}
+
+  % Chinese version
+  \input{./ncku/oral/templete/templete-chi-5}
+
+  % English version
+  \StartNewPage
+  %\thispagestyle{empty}
+  \addcontentsline{toc}{section}{English version}
+  \input{./ncku/oral/templete/templete-eng-2}
+} % End of if{}
+{
+  % ---------------------- 顯示圖片, Image in PDF format ----------------------
+
+  % 設定顯示在目錄
+  \StartNewPage
+  \thispagestyle{empty}
+  \addcontentsline{toc}{chapter}{\OralIndexHeader}
+
+  % Chinese version
+  \addcontentsline{toc}{section}{Chinese version}
+  \includepdf{\GetOralImageChiPath}
+
+  % English version
+  \StartNewPage
+  \thispagestyle{empty}
+  \addcontentsline{toc}{section}{English version}
+  \includepdf{\GetOralImageEngPath}
+} % End of else{}
+
+% ----------------------------------------------------------------------------
+
+% End of page
+\EndOfPage
+
+% ----------------------------------------------------------------------------

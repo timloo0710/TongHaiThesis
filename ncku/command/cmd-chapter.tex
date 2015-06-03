@@ -1,0 +1,53 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% Some helper function about chapter and section
+
+% ----------------------------------------------------------------------------
+
+% Chapters
+\DeclareDocumentCommand{\StartChapter}{+m +g}
+{
+  \chapter{#1}
+  \IfNoValueF{#2}{\label{#2}}
+%  \baselineskip=26pt
+%  \thispagestyle{empty}
+} % End of \DeclareDocumentCommand{}
+
+\def \EndChapter {\EndOfPage}
+
+% Section
+\DeclareDocumentCommand{\StartSection}{+m +g}
+{
+  \section{#1}
+  \IfNoValueF{#2}{\label{#2}}
+} % End of \DeclareDocumentCommand{}
+
+% Sub-Section
+\DeclareDocumentCommand{\StartSubSection}{+m +g}
+{
+  \subsection{#1}
+  \IfNoValueF{#2}{\label{#2}}
+} % End of \DeclareDocumentCommand{}
+
+% Sub-Sub-Section
+\DeclareDocumentCommand{\StartSubSubSection}{+m +g}
+{
+  \subsubsection{#1}
+  \IfNoValueF{#2}{\label{#2}}
+} % End of \DeclareDocumentCommand{}
+
+% ----------------------------------------------------------------------------
+

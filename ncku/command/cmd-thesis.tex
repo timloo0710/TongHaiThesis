@@ -1,0 +1,61 @@
+%
+% This file is part of ncku-thesis-templete.
+%
+% ncku-thesis-templete is distributed in the hope that it will be useful,
+% you can redistribute it and/or modify
+% it under the terms of the Attribution-NonCommercial-ShareAlike
+% 4.0 International.
+%
+% You should have received a copy of the
+% Attribution-NonCommercial-ShareAlike 4.0 International
+% along with ncku-thesis-templete.
+%
+% If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt>.
+%
+
+% Some helper function about thesis
+
+% ----------------------------------------------------------------------------
+
+\newcommand{\BeginThesis}[0]
+{
+  % Start of paper
+  \begin{document}
+
+  % Set the line spacing for whole thesis
+  \baselineskip = 26pt
+} % End of \newcommand{}
+
+\newcommand{\EndThesis}[0]
+{
+  % End of paper
+  \end{document}
+} % End of \newcommand{}
+
+\begin{comment}
+\newcommand{\IncludeContext}[0]
+{
+  % 預設使用模板的說明文件(./example/context)為內容
+  % 請修改"./context/context"中以成為你的論文內容
+  \ifthenelse{\GetLangEnableDemo = 1}%
+  {\input{./example/context}}%
+  {\input{./context/context}}
+} % End of \newcommand{}
+\end{comment}
+
+\newcommand{\CreateThesis}[0]
+{
+  % Start of thesis
+  \BeginThesis
+
+  % 內容 context
+  \ifthenelse{\GetLangEnableDemo = 1}%
+  {\input{./example/context}}%
+  {\input{./context/context}}
+
+  % End of thesis
+  \EndThesis
+} % End of \newcommand{}
+
+% ----------------------------------------------------------------------------
+
