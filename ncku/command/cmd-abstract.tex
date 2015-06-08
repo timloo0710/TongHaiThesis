@@ -23,10 +23,31 @@
   \StartNewPage
 
   % Add to "Table of Contents"
-  \addcontentsline{toc}{chapter}{Abstract (Chinese)}
+  \addcontentsline{toc}{chapter}{中文摘要}
 
   % Title
-  \centerline{\Large \textbf{摘要}}
+  %\centerline{\Large \textbf{摘要}}
+
+  \makebox[4.0em][r]{\Large 論文名稱：}
+  \makebox[6.0em][l]{\Large \GetChiTitle } \\
+  \vspace{0.5cm}  
+  \hspace{2.0em}
+  \makebox[4.0em][r]{\Large 校所名稱：}
+  \makebox[6.0em][l]{\Large \GetSchoolDeptChiName } \\
+  \vspace{0.5cm}  
+  \hspace{2.0em}
+  \makebox[4.0em][r]{\Large 畢業時間：}
+  \makebox[6.0em][l]{\Large 2015年 6月 } \\
+  \vspace{0.5cm}  
+  \hspace{2.0em}
+  \makebox[4.0em][r]{\Large 研究生：}
+  \makebox[6.0em][l]{\Large \GetAuthorChiName }  
+  \makebox[8.0em][c]{}
+  \makebox[4.0em][r]{\Large 指導教授：}
+  \makebox[8.0em][l]{\Large \GetAdvisorChiNameA}
+  
+  
+  
 } % End of \newcommand{}
 
 \newcommand{\StartAbstract}
@@ -34,10 +55,10 @@
   \StartNewPage
 
   % Add to "Table of Contents"
-  \addcontentsline{toc}{chapter}{Abstract (English)}
+  \addcontentsline{toc}{chapter}{英文摘要}
 
   % Title
-  \centerline{\Large \textbf{Abstract}}
+  %\centerline{\Large \textbf{Abstract}}
 } % End of \newcommand{}
 
 \newcommand{\EndChiAbstract}

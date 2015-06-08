@@ -20,6 +20,7 @@
 % --- University name 學校名字 ---
 % 基本上是寫死, 但是如果是別校的人, 可直接使用\SetSchoolName來修改
 \newcommand\univCname{國立成功大學}           % Default
+\newcommand\univDeptCname{東海大學高階經營管理碩士在職專班(研究所)}           % Default
 \newcommand\univEname{National Cheng Kung University} % Default
 \newcommand{\SetSchoolChiName}[1]{\renewcommand{\univCname}{#1}}
 \newcommand{\SetSchoolEngName}[1]{\renewcommand{\univEname}{#1}}
@@ -30,6 +31,7 @@
 } % End of \newcommand{}
 
 \newcommand{\GetSchoolChiName}[0]{\univCname}
+\newcommand{\GetSchoolDeptChiName}[0]{\univDeptCname}
 \newcommand{\GetSchoolEngName}[0]{\univEname}
 % ----------------------------------------------------------------------------
 
