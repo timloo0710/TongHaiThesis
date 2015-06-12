@@ -17,21 +17,23 @@
 
 % 根據user的需求去選用中文或英文封面
 
-\ifthenelse{\GetLangEnableChi = 1}
-{
+%\ifthenelse{\GetLangEnableChi = 1}
+%{
 %  \input{./ncku/cover/cover-chi}
   \input{./ncku/cover/cover-chi-2-ok}
-}{}
+  \input{./ncku/cover/cover-blank}
+  \input{./ncku/cover/cover-rpt}
+%}{}
 
-\ifthenelse{\GetLangEnableDemo = 1}
-{
+%\ifthenelse{\GetLangEnableDemo = 1}
+%{
 %  \input{./ncku/cover/cover-chi-2}
-}{}
+%}{}
 
-\ifthenelse{\GetLangEnableEng = 1}
-{
+%\ifthenelse{\GetLangEnableEng = 1}
+%{
 %  \input{./ncku/cover/cover-eng}
-  \input{./ncku/cover/cover-eng-3}
-}{}
+%  \input{./ncku/cover/cover-eng-3}
+%}{}
 
 % ------------------------------------------------

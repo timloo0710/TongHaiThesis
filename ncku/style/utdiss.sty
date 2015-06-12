@@ -344,7 +344,7 @@
 %\def\thebibliography#1{\chapter*{Bibliography}
 %    \addcontentsline{toc}{chapter}{Bibliography}
 \def\thebibliography#1{\chapter*{References}
-    \addcontentsline{toc}{chapter}{References}
+    \addcontentsline{toc}{chapter}{參考文獻}
     \list
     {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
     \advance\leftmargin\labelsep
@@ -665,14 +665,14 @@
 
 \def\listoffigures{%
     \shortchapter*{List of Figures}
-    \addcontentsline{toc}{chapter}{List of Figures}
+    \addcontentsline{toc}{chapter}{圖次}
     \pagestyle{plain}
     \baselineskip=15pt plus .5pt minus .5pt
     \@starttoc{lof}}
 
 \def\listoftables{%
     \shortchapter*{List of Tables}
-    \addcontentsline{toc}{chapter}{List of Tables}
+    \addcontentsline{toc}{chapter}{表次}
     \pagestyle{plain}
     \baselineskip=15pt plus .5pt minus .5pt
     \@starttoc{lot}}

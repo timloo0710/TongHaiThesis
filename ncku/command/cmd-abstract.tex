@@ -27,24 +27,35 @@
 
   % Title
   %\centerline{\Large \textbf{摘要}}
-
-  \makebox[4.0em][r]{\Large 論文名稱：}
-  \makebox[6.0em][l]{\Large \GetChiTitle } \\
+\begin{minipage}[c][5cm][t]{\textwidth}
+  論文名稱：社群組織之重要構成因素探討:  成員分享行為及\\ 
+  \indent \hspace{5.0em} 輔助分享資訊工具研究  ---以g0v零時政府零時政府為例 \\
+  校所名稱：\GetSchoolDeptChiName \\
+  畢業時間：2015年 6月 \\
+  研究生  ： \GetAuthorChiName \hspace{12.0em} 指導教授： \GetAdvisorChiNameA \\
+  
+  %
+  %\makebox[4.0em][r]{校所名稱：} %abstract
+  %\makebox[6.0em][l]{ \GetSchoolDeptChiName } \\
+  %\vspace{0.5cm}  
+  %\hspace{2.0em}
+  %\makebox[4.0em][r]{畢業時間：}
+  %\makebox[6.0em][l]{2015年 6月 } \\
   \vspace{0.5cm}  
-  \hspace{2.0em}
-  \makebox[4.0em][r]{\Large 校所名稱：}
-  \makebox[6.0em][l]{\Large \GetSchoolDeptChiName } \\
+  %\hspace{2.0em}
+  %\makebox[4.0em][r]{研究生：}
+  %\makebox[6.0em][l]{\GetAuthorChiName }  
   \vspace{0.5cm}  
-  \hspace{2.0em}
-  \makebox[4.0em][r]{\Large 畢業時間：}
-  \makebox[6.0em][l]{\Large 2015年 6月 } \\
-  \vspace{0.5cm}  
-  \hspace{2.0em}
-  \makebox[4.0em][r]{\Large 研究生：}
-  \makebox[6.0em][l]{\Large \GetAuthorChiName }  
   \makebox[8.0em][c]{}
-  \makebox[4.0em][r]{\Large 指導教授：}
-  \makebox[8.0em][l]{\Large \GetAdvisorChiNameA}
+  %\makebox[4.0em][r]{指導教授：}
+  %\makebox[8.0em][l]{\GetAdvisorChiNameA}
+  
+  \hspace{2.0em}
+  
+  
+\end{minipage}  
+
+  \leftline{\Large \textbf{中文摘要:}}
   
   
   
@@ -58,7 +69,18 @@
   \addcontentsline{toc}{chapter}{英文摘要}
 
   % Title
-  %\centerline{\Large \textbf{Abstract}}
+\begin{minipage}[c][5cm][t]{\textwidth}
+  
+  Title of Thesis  ：The most important factor of psudo community :Majoring in \\
+  \indent \hspace{6.5em} sharing behavior and tools ---Let g0v as example \\
+  Name of Institute：Tunghai University  Executive Master of \\
+  \indent \hspace{6.5em} Business Administration Program \\
+  Graduation Time  ：06/2015 \\
+  Student Name     ： \GetAuthorChiName \hspace{12.0em} Advisor Name： \GetAdvisorChiNameA \\
+
+\end{minipage} 
+  
+  \leftline{\Large \textbf{Abstract:}}
 } % End of \newcommand{}
 
 \newcommand{\EndChiAbstract}
